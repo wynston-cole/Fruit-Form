@@ -1,0 +1,48 @@
+<!Doctype html>
+<html>
+	<head>
+		<title>My fruits</title>
+	</head>
+	<style>
+		header{
+			background-color:yellowgreen;
+		}
+	</style>
+<body>
+	<main>
+		<header id="fruit-form">
+			<h1>Fruit Kingdom</h1>
+
+			<input id="fruit-name" placeholder="Enter fruit name">
+
+			<button onclick="addFruit()">Add Fruit</button>
+			
+		</header>
+		<section id="fruits">
+			<ul id="fruits-list">
+				<li>orange</li>
+	        </ul>
+	    </section>
+	    <script type="text/javascript">
+	    	
+	    	function addFruit()
+	    	{
+	    		// 1. Get fruit name
+	    		let fruit_name = document.getElementById("fruit-name").value
+
+	    		// 2. Get unordered (u) list element 
+	    		let unordered_list = document.getElementById("Fruits-list")
+
+	    		// 3.Create list element
+	    		let list_element = document.createElement("li")
+
+	    		// 4. Set fruit name to new list element text
+	    		list_element.innerText = fruit_name
+
+	    		// 5. Add list element to ul
+	    		unordered_list.appendChild(list_element)
+	    	}   
+	    </script>    
+	</main>
+</body>
+</html>
